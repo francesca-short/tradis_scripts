@@ -6,3 +6,9 @@ tradis_insert_sites_FS.py
 
 seq_saturation_test.py
 - For examining the relationship between sequencing depth and number of insertion sites in your data. Takes a .bam and .bai file from your tradis mapping ("bacteria_tradis" command in the Bio-TraDIS pipeline) and calculates the number of unique insertion sites with different numbers of randomly samples reads. Requires pysam, matplotlib.
+
+find_2direction_tn5.py
+- Tn5 transposons can flip in place once inserted, which shows up in the plot file as two insertion sites on opposite strands, 9bp apart (this is due to target site duplication during the transposition). This script finds the proportion of these sites in your plot file, and collapses reads to a single site.
+
+tradis_insert_steps_py3.py
+- similar to tradis_insert_sites_FS.py, but assigns reads and insertion sites based on genome location (in user-defined chunks) rather than features. Useful for making charts or finding interesting intergenic regions.
