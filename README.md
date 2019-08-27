@@ -12,3 +12,6 @@ find_2direction_tn5.py
 
 tradis_insert_steps_py3.py
 - similar to tradis_insert_sites_FS.py, but assigns reads and insertion sites based on genome location (in user-defined chunks) rather than features. Useful for making charts or finding interesting intergenic regions.
+
+Tradis_comparison_positive_selection.R
+- Modified version of tradis_comparison.R script from BioTraDIS pipeline, with additional filtering by insertion index per gene in hit calling. This is for experiments with strong positive selection such as phage or >MIC antibiotic treatment, where calling hits based on read count comparisons alone may give spurious hits due to secondary mutations unrelated to the transposon insertion (when a gene shows increased read counts at one or two insertion sites, but loss of other insertion sites, this is presumed to be due to secondary mutations). Runs in R, requires getopt, edgeR, dplyr.
